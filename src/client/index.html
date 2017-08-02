@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>eSportsCMS</title>
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+<script src="https://unpkg.com/vue"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.css">
+<script src="https://unpkg.com/vue-material"></script>
+
+<link rel="stylesheet" href="style/app.css">
+</head>
+
+<body>
+    <div id="app">
+        <md-toolbar>
+            <md-button href="/" class="md-icon-button">
+                <md-icon>home</md-icon>
+            </md-button>
+
+            <h2 class="md-title" style="flex: 1;">eSportsCMS</h2>
+
+            <md-button class="md-icon-button">
+                <md-icon>search</md-icon>
+            </md-button>
+
+            <md-button v-if="false" class="md-icon-button">
+                <md-icon md-size-2x>account_circle</md-icon>
+            </md-button>
+            <form v-else novalidate @submit.stop.prevent="submit">
+                <ol>
+                    <li style="display: inline-block;">
+                        <md-input-container>
+                            <md-input placeholder="Username"></md-input>
+                        </md-input-container>
+                    </li>
+                    <li style="display: inline-block;">
+                        <md-input-container>
+                            <md-input placeholder="Password" type="password"></md-input>
+                        </md-input-container>
+                    </li>
+                </ol>
+            </form>
+        </md-toolbar>
+
+        <md-layout class="main-content" md-gutter>
+            <md-layout dark md-flex="15" md-column>
+            <md-list>
+                <md-list-item href="/profile">
+                <md-icon>profile</md-icon><span>Profile</span>
+                </md-list-item>
+            </md-list>
+            </md-layout>
+            <md-layout md-column>
+            <p>Welcome to the development edition of eSportsCMS! This is the main content area!</p>
+            </md-layout>
+        </md-layout>
+    </div>
+</body>
+
+</html>
+<script src="script/app.js"></script>
